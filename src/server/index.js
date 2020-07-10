@@ -1,5 +1,7 @@
 const Koa = require('koa');
 const indexRoutes = require('./routes/index'); //refer the routes file
+const movieRoutes = require('./routes/movies'); //this is to query the movies directly
+
 
 const app = new Koa();
 const PORT = 1337;
@@ -12,6 +14,8 @@ const PORT = 1337;
 // });
 
 app.use(indexRoutes.routes()); //instantiate the routes from the routes file
+app.use(movieRoutes.routes()); //keep adding all routes files from the routes folder here
+
 
 const server = app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);

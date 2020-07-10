@@ -1,5 +1,6 @@
 const path = require('path');
 
+//this file is to define the pg db link, migrations and seeds folder for both environments
 const BASE_PATH = path.join(__dirname, 'src', 'server', 'db');
 
 module.exports = {
