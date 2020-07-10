@@ -1,4 +1,5 @@
 const path = require('path');
+require("dotenv").config();
 
 //this file is to define the pg db link, migrations and seeds folder for both environments
 const BASE_PATH = path.join(__dirname, 'src', 'server', 'db');
@@ -6,7 +7,7 @@ const BASE_PATH = path.join(__dirname, 'src', 'server', 'db');
 module.exports = {
   test: {
     client: 'pg',
-    connection: 'postgres://cijwawjg:iMHsj4UNSpJt4orO9fDa_6PvU-bTYooj@john.db.elephantsql.com:5432/cijwawjg',
+    connection: process.env.DATABASE_URL,
     migrations: {
       directory: path.join(BASE_PATH, 'migrations')
     },
@@ -16,7 +17,7 @@ module.exports = {
   },
   development: {
     client: 'pg',
-    connection: 'postgres://cijwawjg:iMHsj4UNSpJt4orO9fDa_6PvU-bTYooj@john.db.elephantsql.com:5432/cijwawjg',
+    connection: process.env.DATABASE_URL,
     migrations: {
       directory: path.join(BASE_PATH, 'migrations')
     },
