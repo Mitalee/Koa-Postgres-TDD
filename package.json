@@ -14,10 +14,10 @@
     "chai": "^4.2.0",
     "knex": "^0.13.0",
     "koa": "^2.13.0",
-    "koa-bodyparser": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
     "koa-router": "^9.1.0",
     "mocha": "^8.0.1",
-    "pg": "^7.1.2"
+    "pg": "^7.18.2"
   },
   "devDependencies": {
     "chai-http": "^3.0.0"

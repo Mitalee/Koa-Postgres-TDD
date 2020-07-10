@@ -26,9 +26,13 @@ describe('routes : movies', () => {
         return knex.seed.run()
       })
 
-    afterEach(() => {
+    afterEach( async function () {
+        this.timeout(60 * 1000)
         return knex.migrate.rollback();
     });
+    // afterEach(() => {
+    //     return knex.migrate.rollback();
+    // });
     
     describe('GET /api/v1/movies', () => {
         it('should return all movies', (done) => {
@@ -99,6 +103,7 @@ describe('routes : movies', () => {
                 });
             });
       });
+
     describe('POST /api/v1/movies', () => {
         it('should return the movie that was added', (done) => {
           chai.request(server)
@@ -151,7 +156,7 @@ describe('routes : movies', () => {
           });
       });
 
-      describe('PUT /api/v1/movies', () => {
+    describe('PUT /api/v1/movies', () => {
         it('should return the movie that was updated', (done) => {
           knex('movies')
           .select('*')
@@ -208,7 +213,7 @@ describe('routes : movies', () => {
             });
           });
           
-          describe('DELETE /api/v1/movies/:id', () => {
+        describe('DELETE /api/v1/movies/:id', () => {
             it('should return the movie that was deleted', (done) => {
               knex('movies')
               .select('*')
