@@ -11,7 +11,7 @@ const PORT = 1337;
 //   };
 // });
 
-app.use(indexRoutes.routes());
+app.use(indexRoutes.routes()); //instantiate the routes from the routes file
 
 const server = app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
