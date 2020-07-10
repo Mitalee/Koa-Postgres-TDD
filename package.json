@@ -1,0 +1,21 @@
+{
+  "name": "koapostgres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server/index.js",
+    "test": "./node_modules/mocha/bin/_mocha"
+  },
+  "keywords": [],
+  "author": "Mitalee",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "koa": "^2.13.0",
+    "mocha": "^8.0.1"
+  },
+  "devDependencies": {
+    "chai-http": "^3.0.0"
+  }
+}
