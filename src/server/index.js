@@ -16,6 +16,7 @@ const PORT = 1337;
 //   };
 // });
 
+//this is a test comment
 app.use(bodyParser());
 app.use(indexRoutes.routes()); //instantiate the routes from the routes file
 app.use(movieRoutes.routes()); //keep adding all routes files from the routes folder here
